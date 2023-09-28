@@ -1,1 +1,75 @@
+import java.lang.*;
+public class Human {
+    String name;
+    int age;
+    int weight;
+    String colour;
+    public Human(String n, int a, int w, String c){
+        name = n;
+        age  = a;
+        weight = w;
+        colour = c;
+    }
+    public void setAge(int age) {
 
+        this.age = age;
+    }
+    public void setWeight(int weight){
+
+        this.weight = weight;
+    }
+    public void setName(String name) {
+
+        this.name = name;
+    }
+    public void setColour(String colour){
+
+        this.colour = colour;
+    }
+    public String getName(){
+
+        return name;
+    }
+    public int getAge() {
+
+        return age;
+    }
+    public int getWeight() {
+
+        return weight;
+    }
+    public String getColour() {
+
+        return colour;
+    }
+    public String toString(){
+        return this.name+", age "+this.age + " weight " + this.weight + " colour " + this.colour;
+    }
+
+    public void intoDogAge(){
+
+        System.out.println(name + "'s age in dog years is " + age / 7 + " years");
+    }
+}
+
+public class TestHuman {
+    public static void main(String[] args) {
+        Human d1 = new Human("Mike", 12, 30, "black");
+        Human d2 = new Human("Helen", 7, 25, "white");
+        Human d3 = new Human("Helen", 7, 25, "white");
+        d3.setName("Derick");
+        d3.setAge(122);
+        d3.setWeight(500);
+        d3.setColour("yellow");
+        System.out.println(d1);
+        System.out.println(d2);
+        System.out.println(d3);
+        System.out.println(d3.getName());
+        System.out.println(d3.getAge());
+        System.out.println(d3.getWeight());
+        System.out.println(d3.getColour());
+        d1.intoDogAge();
+        d2.intoDogAge();
+        d3.intoDogAge();
+    }
+}
